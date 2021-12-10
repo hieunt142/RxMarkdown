@@ -1,5 +1,5 @@
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.jfrog.bintray'
 
 task sourcesJar(type: Jar) {
     from project.android.sourceSets.main.java.srcDirs
@@ -31,57 +31,57 @@ artifacts {
 
 version = "0.1.3"
 
-def siteUrl = 'https://github.com/yydcdut/RxMarkdown'
-def gitUrl = 'https://github.com/yydcdut/RxMarkdown.git'
+def siteUrl = 'https://github.com/hieunt142/RxMarkdown'
+def gitUrl = 'https://github.com/hieunt142/RxMarkdown.git'
 
-group = "com.yydcdut"
+group = "com.github.hieunt142"
 
-if (project.rootProject.file('local.properties').exists()) {
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-    bintray {
-        user = properties.getProperty("bintray.user")
-        key = properties.getProperty("bintray.apikey")
-        configurations = ['archives']
-        pkg {
-            repo = "maven"
-            name = "Markdown-Processor"
-            websiteUrl = siteUrl
-            vcsUrl = gitUrl
-            licenses = ["Apache-2.0"]
-            publish = true
-        }
-    }
-
-}
-
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                name 'Markdown-Processor'
-                url siteUrl
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'yydcdut'
-                        name 'yydcdut'
-                        email '378040621@qq.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
+//if (project.rootProject.file('local.properties').exists()) {
+//    Properties properties = new Properties()
+//    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//    bintray {
+//        user = properties.getProperty("bintray.user")
+//        key = properties.getProperty("bintray.apikey")
+//        configurations = ['archives']
+//        pkg {
+//            repo = "maven"
+//            name = "Markdown-Processor"
+//            websiteUrl = siteUrl
+//            vcsUrl = gitUrl
+//            licenses = ["Apache-2.0"]
+//            publish = true
+//        }
+//    }
+//
+//}
+//
+//install {
+//    repositories.mavenInstaller {
+//        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//                name 'Markdown-Processor'
+//                url siteUrl
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id 'yydcdut'
+//                        name 'yydcdut'
+//                        email '378040621@qq.com'
+//                    }
+//                }
+//                scm {
+//                    connection gitUrl
+//                    developerConnection gitUrl
+//                    url siteUrl
+//                }
+//            }
+//        }
+//    }
+//}
